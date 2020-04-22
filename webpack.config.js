@@ -67,8 +67,8 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill', './js/index.js'],
-    colors_and_types: ['./js/colors_and_types.js']
+    coloursAndType: ['@babel/polyfill', './js/colours_and_type.js'],
+    headersAndFooters: ['@babel/polyfill', './js/headers_and_footers.js'],
   },
   output: {
     filename: filename('js'),
@@ -84,14 +84,16 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './pug/pages/index.pug',
-      filename: 'index.html',
-      inject: true
+      template: './pug/pages/uikit/headers_and_footers.pug',
+      filename: 'headers_and_footers.html',
+      inject: true,
+      chunks: ['headersAndFooters']
     }),
     new HTMLWebpackPlugin({
-      template: './pug/pages/uikit/colors_and_types.pug',
-      filename: 'colors_and_types.html',
-      inject: true
+      template: './pug/pages/uikit/colours_and_type.pug',
+      filename: 'colours_and_type.html',
+      inject: true,
+      chunks: ['coloursAndType']
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([

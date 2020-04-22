@@ -1,0 +1,34 @@
+mixin colourItem(classColour, name, id)
+  .item
+    .colour(class=classColour)
+    .colour__title
+      .colour__name= name
+      .colour__id= id
+mixin typeItem(classType, title, text)
+  .type(class=classType)
+    .item
+      .type__title= title
+      .type__text= text
+
+doctype html
+html(lang='en')
+  head
+    title Colors &amp types
+  body
+    include ../../includes/header__uikit.pug
+    .container
+      .colours
+        +colourItem('dark-shade-100', 'Dark Shade 100%', '#1F2041')
+        +colourItem('dark-shade-75', 'Dark Shade 75%', '#1F2041')
+        +colourItem('dark-shade-50', 'Dark Shade 50%', '#1F2041')
+        +colourItem('dark-shade-25', 'Dark Shade 25%', '#1F2041')
+        +colourItem('dark-shade-5', 'Dark Shade 5%', '#1F2041')
+        +colourItem('purple', 'Purple', '#BC9CFF')
+        +colourItem('green', 'Green', '#6FCF97')
+      .type 
+        +typeItem('h1', 'H1', 'This one is the sub-section or widget title')
+        +typeItem('h2', 'H2', 'Next one is the item title inside widgets')
+        +typeItem('h3', 'H3', 'This is a label or CTA text')
+        +typeItem('body', 'Body', 'This is a body text which is used for most of the design, like paragraphs, lists, etc')
+        
+      

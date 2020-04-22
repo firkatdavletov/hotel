@@ -1,0 +1,70 @@
+
+@import ../sass/colours
+@import ../sass/type
+
+
+body
+    color: $dark-shade
+    margin: 0
+.container
+    margin: 4.188rem 4.188rem 7.813rem 9.375rem
+    max-width: 68.5rem
+    display: flex
+    justify-content: space-between
+.item
+    display: flex
+    margin-bottom: 1.25rem
+.colour__title
+    @extend %h2
+    margin: auto 0
+    padding-left: 2.5rem
+.colour__id
+    font-weight: normal
+    padding-top: 0.375rem
+.colour
+    .dark-shade-100,
+    .dark-shade-75,
+    .dark-shade-50,
+    .dark-shade-25, 
+    .dark-shade-5,
+    .purple,
+    .green
+    width: 4.375rem
+    height: 4.375rem
+    border-radius: 0.375rem
+.colour.dark-shade-100
+    background: $dark-shade
+.colour.dark-shade-75
+    background: $dark-shade-75
+.colour.dark-shade-50
+    background: $dark-shade-50
+.colour.dark-shade-25
+    background: $dark-shade-25
+.colour.dark-shade-5
+    background: $dark-shade-5
+.colour.purple
+    background: $purple
+.colour.green
+    background: $green
+.type
+    max-width: 25.188rem
+.type .item
+    margin-bottom: 3.125rem
+.type__text
+    margin-left: 1.875rem
+.type__title
+    font-weight: normal !important
+    color: $dark-shade-25 !important
+    min-width: 2.5rem
+    text-align: right
+.type.h1
+    @extend %h1
+.type.h2
+    @extend %h2
+    
+.type.h3
+    @extend %h3
+  
+.type.body
+    @extend %body
+   
