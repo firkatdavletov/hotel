@@ -5,4 +5,20 @@ html(lang='en')
   body
       include ../../includes/header__uikit.pug
       include ../../includes/header.pug
-    
+
+      - var Home = {name: 'Home', href: '#', class: 'home', icon: ''}
+      - var AboutUs = {name: 'About Us', href: '#', class: 'aboutUs', icon: ''}
+      - var AboutUs = {name: 'About Us', href: '#', class: 'aboutUs', icon: ''}
+      - var Services = {name: 'Services', href: '#', class: 'services', icon: 'expand_more'}
+      - var Careers = {name: 'Careers', href: '#', class: 'careers', icon: ''}
+      - var News = {name: 'News', href: '#', class: 'news', icon: ''}
+      - var Documentation = {name: 'Documentation', href: '#', class: 'documentation', icon: ''}
+      - var Pages = {Home, AboutUs, Services, Careers, News, Documentation}
+      - var User = {name: 'Cosmin Negoita', href: '#'}
+      - var Anon = {name: '', href: ''}
+      - var Login = {class: 'login', name: 'LOGIN'}
+      - var Register = {class: 'register', name: 'REGISTER'}
+
+      +header(Pages, Anon, Login, Register)
+
+      +header(Pages, User, Login, Register)

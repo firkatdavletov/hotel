@@ -1,13 +1,24 @@
-header.header
-    .container
-        .header__logo
-        .header__nav
-            ul
-                li Home
-                li About Us
-                li Services
-                li Careers
-                li News
-                li Documentation
-            .header__login
-            .header__username
+mixin header(Pages, User, login, register)
+    header.header
+        .container
+            .header__inner
+                .header__logo
+                .header__menu
+                    .header__nav
+                        ul
+                            each page in Pages
+                                li(class=page.class)
+                                    a(href= page.href)= page.name
+                                    i= page.icon
+
+                    .header__user
+                        if User.name
+                            #user
+                                a(href=User.href)= User.name
+                        else
+                            .header__btn
+                                a(class=Login.class href='#')
+                                    span= Login.name
+                                a(class=Register.class href='#')
+                                    span= Register.name
+
