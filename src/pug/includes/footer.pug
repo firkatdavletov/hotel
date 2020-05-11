@@ -1,18 +1,45 @@
-mixin footer()
-    footer.footer
-        .container
-            .footer__inner
-                .footer__widgets
-                    .footer__title
-                        .logo
-                        .footer__text
-                    .footer__navigation
-                    .footer__about
-                    .footer__support
-                    .footer__subscribe
-                        .footer__subscribe-title
-                        .footer__subscribe-text
-                        .footer__subscribe-form
-                .footer__copyright
-                    .footer__copyright-text
+mixin footer(footerClass, footerText, FooterNav, subscribeTitle, subscribeText, copyrightText)
+    case footerClass
+        when 'widgets'
+            footer.footer
+                .container
+                    .footer__inner
+                        .footer__widgets
+                            .footer__title
+                                .footer__logo
+                                .footer__text= footerText
+                            .footer__menu
+                                each val in FooterNav
+                                    .footer__menu-item
+                                        p= val.name
+                                        each item in val.items
+                                            ul
+                                                li
+                                                    a(href=item.href)=item.name
+
+                            .footer__subscribe
+                                .footer__subscribeTitle
+                                    p= subscribeTitle
+                                .footer__subscribe-text= subscribeText
+                                .footer__subscribe-form
+                                    input(type='email', placeholder='Your email address')
+                                    i arrow_forward
+            footer.copyright
+                .container
+                    .footer__copyright-inner
+                        .footer__copyright-text= copyrightText
+                        .footer__copyright-icons
+                            i(class='fa fa-twitter fa-fw')
+                            i(class='fa fa-facebook-square fa-fw')
+                            i(class='fa fa-instagram fa-fw')
+        when 'creative'
+            footer.footer
+                .footer__creative-inner
+                    .footer__logo
+                    .footer__text= footerText
                     .footer__copyright-icons
+                        i(class='fa fa-twitter fa-fw')
+                        i(class='fa fa-facebook-square fa-fw')
+                        i(class='fa fa-instagram fa-fw')
+
+                

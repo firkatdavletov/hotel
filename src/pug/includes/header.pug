@@ -1,4 +1,4 @@
-mixin header(Pages, User, login, register)
+mixin header(Pages, User)
     header.header
         .container
             .header__inner
@@ -6,7 +6,7 @@ mixin header(Pages, User, login, register)
                 .header__menu
                     .header__nav
                         ul
-                            each page in Pages
+                            each page in Header__menu
                                 li(class=page.class)
                                     a(href= page.href)= page.name
                                     i= page.icon
@@ -16,9 +16,8 @@ mixin header(Pages, User, login, register)
                             #user
                                 a(href=User.href)= User.name
                         else
-                            .header__btn
-                                a(class=Login.class href='#')
-                                    span= Login.name
-                                a(class=Register.class href='#')
-                                    span= Register.name
+                            .header__btns
+                                include ../utils/btn.pug
+                                +btn(true, 'LOGIN')
+                                +btn(false, 'REGISTER')
 

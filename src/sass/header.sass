@@ -1,11 +1,11 @@
 @import ../sass/type
-
-
+@import ../sass/utils/btn
 
 .header__inner
     display: flex
     justify-content: space-between
     align-items: center
+    height: 4.1rem
 .header__logo
     background-image: url(../img/logo2.png)
     background-size: cover
@@ -13,54 +13,43 @@
     width: 6.625rem
 .header__menu
     display: flex
-    @extend %body
-    
-    a
-        text-decoration: none
-        color: inherit
-        &:hover
-            text-shadow: 0 0 .04rem #333, 0 0 0.04rem #333
-    i
-        @extend %materialIcons
-        &:hover
-            text-shadow: 0 0 .04rem #333, 0 0 0.04rem #333
-
 .header__nav 
     ul
         display: flex
     li
-        list-style-type: none     
-    li+li
-        padding-left: 1.875em
+        list-style-type: none
+        a
+            text-decoration: none
+            @extend %body
+            color: $dark-shade-50
+            &:hover
+                @extend %hover
+        i
+            @extend %materialIcons  
+            &:hover
+                @extend %hover 
+    li
+        padding-right: 1.875em
+    li.services
+            padding-right: 1.275rem 
 .header__user
     display: flex
     align-items: center
-    margin-left: 1.875rem
     #user
-        padding-left: 1rem
+        padding-left: 2.5rem
         border-left: .0625rem solid $dark-shade-10
-.header__btn
-    display: inline-block
-    a.login, a.register
-        background: linear-gradient(#bc9cff, #8ba4f9)
-        border-radius: 1.375rem
-        color: #bc9cff
-        display: inline-block
-        font-size: 0.75rem
-        padding: 0.125rem
-        text-decoration: none
-        font-weight: bold
-        text-shadow: none
-        span 
-            background: #ffffff
-            display: block
-            padding: 0.5625rem 1.25rem 0.625rem
-            border-radius: 1.375rem
-    a.register
-        color: #ffffff
-        span
-            background: none
-    .login
-        margin-right: 1rem 
+        a
+            text-decoration: none
+            @extend %body
+            color: $dark-shade-50
+            &:hover
+                @extend %hover
+.header__btns
+    @extend %body
+    display: flex
+    justify-content: space-between
+    width: 11.8rem
+
+
     
 

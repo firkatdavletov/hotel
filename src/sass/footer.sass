@@ -1,0 +1,54 @@
+@import ../sass/type
+
+footer
+    .widgets, .copyright 
+    background: #fff  
+    @extend %body
+p
+    @extend %h3
+li
+    list-style-type: none
+    color: $dark-shade-50
+a
+    text-decoration: none
+    color: inherit
+.footer__title
+    width: 16.25rem
+.footer__logo
+    background-image: url(../img/logo2.png)
+    background-size: cover
+    height: 2.5rem
+    width: 6.625rem
+.footer__widgets
+    display: flex
+    justify-content: space-between
+.footer__menu
+    display: flex
+    justify-content: space-between
+.footer__subscribe-form
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 16.25rem
+    height: 2.75rem
+    border-radius: 0.25rem
+    border: 0.0625rem solid $dark-shade-25
+    input
+        border: none
+        margin-left: 1rem
+    i
+        @extend %materialIcons
+.footer__copyright-inner
+    display: flex
+    justify-content: space-between
+.footer__creative-inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    .footer__text
+        max-width: 30rem
+        text-align: center
+   
+        
+        
+  

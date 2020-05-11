@@ -3,22 +3,38 @@ html(lang='en')
   head
     title Headers &amp Footers
   body
+    header.uikit
       include ../../includes/header__uikit.pug
-      include ../../includes/header.pug
 
-      - var Home = {name: 'Home', href: '#', class: 'home', icon: ''}
-      - var AboutUs = {name: 'About Us', href: '#', class: 'aboutUs', icon: ''}
-      - var AboutUs = {name: 'About Us', href: '#', class: 'aboutUs', icon: ''}
-      - var Services = {name: 'Services', href: '#', class: 'services', icon: 'expand_more'}
-      - var Careers = {name: 'Careers', href: '#', class: 'careers', icon: ''}
-      - var News = {name: 'News', href: '#', class: 'news', icon: ''}
-      - var Documentation = {name: 'Documentation', href: '#', class: 'documentation', icon: ''}
-      - var Pages = {Home, AboutUs, Services, Careers, News, Documentation}
-      - var User = {name: 'Cosmin Negoita', href: '#'}
-      - var Anon = {name: '', href: ''}
-      - var Login = {class: 'login', name: 'LOGIN'}
-      - var Register = {class: 'register', name: 'REGISTER'}
-
-      +header(Pages, Anon, Login, Register)
-
-      +header(Pages, User, Login, Register)
+    include ../../includes/header.pug
+    include ../../includes/footer.pug
+    - var Home = {name: 'Home', href: '#', class: 'home', icon: ''}
+    - var AboutUs = {name: 'About Us', href: '#', class: 'aboutUs', icon: ''}
+    - var Services = {name: 'Services', href: '#', class: 'services', icon: 'expand_more'}
+    - var Careers = {name: 'Careers', href: '#', class: 'careers', icon: ''}
+    - var News = {name: 'News', href: '#', class: 'news', icon: ''}
+    - var Documentation = {name: 'Documentation', href: '#', class: 'documentation', icon: ''}
+    - var Support = {name: 'Support', href: '#'}
+    - var Products = {name: 'Products', href: '#'}
+    - var WhoWeAre = {name: 'Who we are', href: '#'}
+    - var OurTeam = {name: 'Our team', href: '#'}
+    - var Careers = {name: 'Careers', href: '#'}
+    - var Investors = {name: 'Investors', href: '#'}
+    - var Community = {name: 'Community', href: '#'}
+    - var GetInTouch = {name: 'Get in touch', href: '#'}
+    - var Header__menu = {Home, AboutUs, Services, Careers, News, Documentation}
+    - var User = {name: 'Cosmin Negoita', href: '#'}
+    - var Anon = {name: '', href: ''}
+    +header(Header__menu, Anon)
+    +header(Header__menu, User)
+    - var footerText ='Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
+    - var Navigation__menu = {name: 'Navigation', items: [AboutUs, News, Support, Products]}
+    - var AboutUs__menu = {name: 'About Us', items: [WhoWeAre, OurTeam, Careers, Investors]}
+    - var Support__menu = {name: 'Support', items: [Documentation, Community, GetInTouch]}
+    - var FooterNav = [Navigation__menu, AboutUs__menu, Support__menu]
+    - var subscribeTitle = 'Subscribe to our newsletter' 
+    - var subscribeText = 'Receive our latest news and promotions in your inbox!'
+    - var copyrightText = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+    
+    +footer('widgets', footerText, FooterNav, subscribeTitle, subscribeText, copyrightText)
+    +footer('creative', footerText, FooterNav, subscribeTitle, subscribeText, copyrightText)
