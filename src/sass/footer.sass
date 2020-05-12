@@ -1,19 +1,24 @@
 @import ../sass/type
+@import ../sass/utils/icons
 
 footer
     .widgets, .copyright 
     background: #fff  
     @extend %body
-p
-    @extend %h3
-li
-    list-style-type: none
-    color: $dark-shade-50
-a
-    text-decoration: none
-    color: inherit
+    p
+        @extend %h3
+    ul
+        padding: 0
+    li
+        list-style-type: none
+        color: $dark-shade-50
+    a
+        text-decoration: none
+        color: inherit
 .footer__title
-    width: 16.25rem
+    width: 15rem
+    .footer__text
+        margin: 1rem 0
 .footer__logo
     background-image: url(../img/logo2.png)
     background-size: cover
@@ -25,12 +30,18 @@ a
 .footer__menu
     display: flex
     justify-content: space-between
+    width: 29.3rem
+    margin: -0.4rem 3rem 0rem 0rem
+.footer__subscribe
+    width: 15rem
+    margin: -0.4rem 0.4rem 0rem 0rem
 .footer__subscribe-form
     display: flex
     align-items: center
     justify-content: space-between
-    width: 16.25rem
-    height: 2.75rem
+    margin-top: 1.4rem
+    width: 15.15rem
+    height: 2.45rem
     border-radius: 0.25rem
     border: 0.0625rem solid $dark-shade-25
     input
@@ -38,9 +49,16 @@ a
         margin-left: 1rem
     i
         @extend %materialIcons
+        margin-right: 0.5rem
+.footer__subscribe-text
+    margin-top: 1rem
 .footer__copyright-inner
     display: flex
     justify-content: space-between
+    align-items: center
+    height: 4.1rem
+.footer__copyright-icons
+    margin: 0rem 0rem 0rem 0rem
 .footer__creative-inner
     display: flex
     flex-direction: column
@@ -48,6 +66,7 @@ a
     .footer__text
         max-width: 30rem
         text-align: center
+        margin: 0.9rem 0rem 1.7rem
    
         
         

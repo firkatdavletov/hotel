@@ -29,17 +29,13 @@ mixin footer(footerClass, footerText, FooterNav, subscribeTitle, subscribeText, 
                     .footer__copyright-inner
                         .footer__copyright-text= copyrightText
                         .footer__copyright-icons
-                            i(class='fa fa-twitter fa-fw')
-                            i(class='fa fa-facebook-square fa-fw')
-                            i(class='fa fa-instagram fa-fw')
+                            include stack_icons.pug
         when 'creative'
             footer.footer
                 .footer__creative-inner
                     .footer__logo
                     .footer__text= footerText
                     .footer__copyright-icons
-                        i(class='fa fa-twitter fa-fw')
-                        i(class='fa fa-facebook-square fa-fw')
-                        i(class='fa fa-instagram fa-fw')
+                        include stack_icons.pug
 
                 

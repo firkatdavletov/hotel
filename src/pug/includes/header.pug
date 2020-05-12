@@ -17,7 +17,7 @@ mixin header(Pages, User)
                                 a(href=User.href)= User.name
                         else
                             .header__btns
-                                include ../utils/btn.pug
+                                include btn.pug
                                 +btn(true, 'LOGIN')
                                 +btn(false, 'REGISTER')
 
