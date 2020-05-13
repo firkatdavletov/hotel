@@ -69,6 +69,7 @@ module.exports = {
   entry: {
     coloursAndType: ['@babel/polyfill', './js/colours_and_type.js'],
     headersAndFooters: ['@babel/polyfill', './js/headers_and_footers.js'],
+    cards: ['@babel/polyfill', './js/cards.js']
   },
   output: {
     filename: filename('js'),
@@ -94,6 +95,12 @@ module.exports = {
       filename: 'colours_and_type.html',
       inject: true,
       chunks: ['coloursAndType']
+    }),
+    new HTMLWebpackPlugin({
+      template: './pug/pages/uikit/cards.pug',
+      filename: 'cards.html',
+      inject: true,
+      chunks: ['cards']
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([

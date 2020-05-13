@@ -1,4 +1,4 @@
-mixin btn(type, title)
+mixin btn(type, title, icon)
     .btn
         if type
             a(class= 'btn_type1' href='#')
@@ -6,5 +6,6 @@ mixin btn(type, title)
         else
             a(class= 'btn_type2' href='#')
                 span= title
+                i= icon
 
         

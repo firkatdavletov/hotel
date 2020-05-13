@@ -1,0 +1,22 @@
+@import ../type
+.form-guests
+    .form-guests__title
+        h1
+            @extend %h3
+    .form-guests__inner
+        @extend %body
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 1.4rem
+        width: 15.15rem
+        height: 2.45rem
+        border-radius: 0.25rem
+        border: 0.0625rem solid $dark-shade-25
+        input
+            border: none
+            margin-left: 1rem
+            background-color: transparent
+        i
+            @extend %materialIcons
+            margin-right: 0.5rem

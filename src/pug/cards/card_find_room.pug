@@ -1,0 +1,12 @@
+.card-find
+    .card-find__title Найдём номера под ваши желания
+    .card-find__date
+        include ../utils/form-date.pug
+        +formDate('ПРИБЫТИЕ', 'ДД.ММ.ГГГГ')
+        +formDate('ВЫЕЗД', 'ДД.ММ.ГГГГ')
+    .card-find__guests
+        include ../utils/form-guests.pug
+        +formGuests('ГОСТИ', 'Сколько гостей')
+    .card-find__btn
+        include ../includes/btn.pug
+        +btn(false, 'ПОДОБРАТЬ НОМЕР', 'arrow_forward')

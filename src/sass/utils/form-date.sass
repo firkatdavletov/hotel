@@ -1,0 +1,23 @@
+@import ../type
+.form-date
+    .form-date__title
+        h1
+            @extend %h3
+    .form-date__inner
+        @extend %body
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 1.4rem
+        width: 9.375rem
+        height: 2.75rem
+        border-radius: 0.25rem
+        border: 0.0625rem solid $dark-shade-25
+        input
+            border: none
+            margin-left: 1rem
+            background-color: transparent
+            width: 9.375rem
+        i
+            @extend %materialIcons
+            margin-right: 0.5rem
